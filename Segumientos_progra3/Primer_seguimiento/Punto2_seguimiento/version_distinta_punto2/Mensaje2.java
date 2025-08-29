@@ -7,7 +7,7 @@ public class Mensaje2 {
 
     public static void main(String[] args) {
         try {
-            // 1) Pedir el texto al usuario
+            // 1) Pedir entrada de informacion al usuario
             String mensaje = JOptionPane.showInputDialog(null, "Proporcione un Mensaje:");
             if (mensaje == null || mensaje.trim().isEmpty()) {
                 JOptionPane.showMessageDialog(null, "No se proporcionó mensaje.");
@@ -18,15 +18,15 @@ public class Mensaje2 {
             ProcessBuilder pb = new ProcessBuilder("elixir", "conteo_letras.exs", mensaje);
             pb.redirectErrorStream(true);
 
-            // 3) Iniciar proceso
+            
             Process p = pb.start();
 
-            // 4) Leer salida de Elixir
+            
             BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));
             String respuesta = br.readLine(); // Elixir devuelve una línea
             int exit = p.waitFor();
 
-            // 5) Mostrar resultado
+            // 3) Mostrar resultado
             if (respuesta != null && !respuesta.isEmpty()) {
                 JOptionPane.showMessageDialog(null, " La palabra otorgada tiene: " + respuesta + " letras ");
             } else {

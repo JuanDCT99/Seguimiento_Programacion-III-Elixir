@@ -18,6 +18,10 @@ defmodule Util do
     |> String.trim()
   end
 
+  @doc """
+  Propone un input usando un programa de Java
+  """
+
   def show_message(message) do
     System.cmd("java", ["-cp", ".", "Mensaje", message])
   end

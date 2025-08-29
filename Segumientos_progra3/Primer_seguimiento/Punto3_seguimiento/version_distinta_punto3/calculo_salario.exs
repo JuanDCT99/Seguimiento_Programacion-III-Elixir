@@ -1,4 +1,5 @@
 # calculo_salario.exs
+
 defmodule Calculo do
   def ejecutar() do
     case System.argv() do

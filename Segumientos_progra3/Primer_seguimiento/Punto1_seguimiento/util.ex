@@ -18,9 +18,17 @@ defmodule Util do
     |> String.trim()
   end
 
+  @doc """
+  Funcion para mostrar un mensaje (diferente a la funcion numero 1) atraves del cmd
+  """
+
   def show_message(message) do
     System.cmd("java", ["-cp", ".", "Mensaje", message])
   end
+
+  @doc """
+  Funcion para pedir informacion atraves del cmd
+  """
 
   def input_data(data) do
     System.cmd("java", ["-cp",".","Mensaje","input",data])

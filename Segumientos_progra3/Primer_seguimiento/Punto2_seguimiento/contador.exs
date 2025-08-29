@@ -1,3 +1,8 @@
+  @moduledoc """
+  Modulo Contador que contiene la logica del programa de elixir que recibira una cadena de texto
+  Posteriormente se llamara a util.ex para obtener la longitud de la cadena de texto
+  """
+
 defmodule Contador do
   alias Util
   def main() do
