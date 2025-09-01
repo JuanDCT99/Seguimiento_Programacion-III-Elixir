@@ -1,18 +1,7 @@
 #RESOLUCION DEL PUNTO 4 DEL SEGUIMIENTO NUMERO 2
 
-moduledoc"""
-
-Punto 4 corresponiente al segundo seguimiento del area de programacion III ELixir
-
-"""
-
 defmodule Salario do
 
-  docmodule"""
-
-  Funcion que llama a los metodos para la ejecución del programa de forma adecuada
-
-  """
 
   def llamar_metodos do
     name = preguntar_nombre()
@@ -21,41 +10,23 @@ defmodule Salario do
     calcular_salario_asignado(name, money, time)
   end
 
-  docmodule"""
 
-  Funcion que pregunta el nombre al usuario
-
-  """
 
   def preguntar_nombre do
     Funcional.input("Ingrese su nombre: " ,:string)
   end
 
-  docmodule"""
-
-  Funcion que pregunta el salario al usuario
-
-  """
 
   def preguntar_salario(name) do
     Funcional.input("Señor@ #{name}, Cual es su salario base mensual (teniendo en cuenta el subsicidio de transporte, prestaciones y servicios ofrecidos a usted): " ,:float)
   end
 
-  docmodule"""
-
-  Funcion que pregunta las horas de servicio extra al servicio
-
-  """
 
   def preguntar_horas_servicio_extra do
     Funcional.input("Teniendo en cuenta la informacion proporcionada anteriormente; Cual es la cantidad de horas extras en las cuales usted ha prestado servicio: " ,:integer)
   end
 
-  docmodule"""
 
-  Funcion que calcula el salario correspondiente y adecuado al usuario
-
-  """
 
   def calcular_salario_asignado(name, money, time) do
     valor_hora_normal = money / 240
