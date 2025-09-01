@@ -31,7 +31,9 @@ defmodule Consumo_combustible do
   def calcular_rendimiento(nombre,cedula,distancia, consumo) do
 
     rendimiento = Float.round(distancia / consumo, 2)
-    IO.puts("Señor@ #{nombre}, identificado con la cedula #{cedula}, su rendimiento total es de #{rendimiento}")
+    mensaje_final = "Señor@ #{nombre}, identificado con la cedula #{cedula}, su rendimiento total es de #{rendimiento}"
+    IO.puts(mensaje_final)
+    Funcional.mostrar_mensaje(mensaje_final)
   end
 
 end

@@ -22,8 +22,9 @@ defmodule Conversion do
     fahrenheit = (temperatura * 9/5) + 32
     kelvin = temperatura + 273.15
 
-    IO.puts("Usuario designado con el nombre #{usuario}, la temperatura ingresada fue de #{temperatura}, los calculos realizados indican que la temperatura en grados Fahrenheit fue de #{fahrenheit}, mientras que los Kelvin fueron de #{kelvin} ")
-
+    mensaje_final = "Usuario #{usuario}, la temperatura en grados Fahrenheit es #{fahrenheit}°F y en Kelvin es #{kelvin}K"
+    IO.puts(mensaje_final)
+    Funcional.mostrar_mensaje(mensaje_final)
   end
 
 end

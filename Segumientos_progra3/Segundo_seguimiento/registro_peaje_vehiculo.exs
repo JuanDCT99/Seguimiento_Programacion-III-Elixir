@@ -28,19 +28,25 @@ defmodule Peaje do
       "carro" ->
         tarifa = 10000
         resultado = {placa, tipo, tarifa}
-        IO.inspect(resultado, label: "Vehículo registrado") # IO.inspect es genial para depurar
+        mensaje_final = "Vehículo #{placa} (#{tipo}) debe pagar $#{tarifa}"
+        IO.inspect(resultado, label: "Vehículo registrado")
+        Funcional.mostrar_mensaje(mensaje_final)
 
       "moto" ->
         tarifa = 5000
         resultado = {placa, tipo, tarifa}
+        mensaje_final = "Vehículo #{placa} (#{tipo}) debe pagar $#{tarifa}"
         IO.inspect(resultado, label: "Vehículo registrado")
+        Funcional.mostrar_mensaje(mensaje_final)
 
 
       "camion" ->
         peso = ingresar_peso_vehiculo()
         tarifa = 20000 + (2000 * peso)
         resultado = {placa, tipo, tarifa}
+        mensaje_final = "Vehículo #{placa} (#{tipo}) debe pagar $#{tarifa}"
         IO.inspect(resultado, label: "Vehículo registrado")
+        Funcional.mostrar_mensaje(mensaje_final)
 
       _->
         IO.puts("Tipo de vehículo '#{tipo}' no es válido.")

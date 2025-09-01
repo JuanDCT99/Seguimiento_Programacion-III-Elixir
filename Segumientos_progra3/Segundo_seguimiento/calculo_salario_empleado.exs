@@ -30,7 +30,9 @@ defmodule Salario do
 
     salario_final = money + pago_horas_extra
 
-    IO.puts("Señor@ #{name}, dado que su salario base fue de #{money} y las horas de servicio ejercidas por usted fueron de #{time}, su salario completo es de #{salario_final}")
+    mensaje_final = "Señor@ #{name}, dado que su salario base fue de #{money} y las horas de servicio ejercidas por usted fueron de #{time}, su salario completo es de #{salario_final}"
+    IO.puts(mensaje_final)
+    Funcional.mostrar_mensaje(mensaje_final)
   end
 
 end

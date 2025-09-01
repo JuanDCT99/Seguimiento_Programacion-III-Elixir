@@ -2,7 +2,7 @@
 defmodule Funcional do
 
   def mostrar_mensaje(mensaje) do
-    System.cmd("java", ["-cp", ".", "Mensaje", "input", mensaje])
+    System.cmd("java", ["-cp", ".", "Mensaje", mensaje])
   end
 
   def input(mensaje, :string) do

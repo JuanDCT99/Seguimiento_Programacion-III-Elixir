@@ -26,7 +26,9 @@ defmodule Control_Inventario do
 
   def calcular_inventario(titulo_libro, cantidad_unidades, precio_libros) do
     valor_total = cantidad_unidades * precio_libros
-    IO.puts("El libro titulado #{titulo_libro}, cuenta en este momento con #{cantidad_unidades} unidades, cada una con un valor unico de #{precio_libros}, por ende el valor total es de #{valor_total}")
+    mensaje_final = "El libro '#{titulo_libro}' tiene un valor de inventario total de $#{valor_total}"
+    IO.puts(mensaje_final)
+    Funcional.mostrar_mensaje(mensaje_final)
   end
 
 end
