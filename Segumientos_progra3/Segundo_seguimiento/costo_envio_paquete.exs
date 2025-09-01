@@ -1,5 +1,11 @@
 #SOLUCION DEL PUNTO 6 DEL SEGUNDO SEGUIMIENTO
 
+
+moduledoc"""
+
+Solucion del punto 6 del seguimiento numero 2 de programacion III
+
+"""
 defmodule Empaquetadora do
 
   def realizar_tareas do
@@ -26,21 +32,48 @@ defmodule Empaquetadora do
   end
 
 
-
-
   def solicitar_nombre_usuario do
+
+    docmodule"""
+
+  Funcion que pide su nombre al usuario
+
+  """
     Funcional.input("Apreciado Cliente, ingrese su nombre: " ,:string)
   end
 
+
+
   def ingresar_peso_paquete do
+
+     docmodule"""
+
+  Funcion que pide el peso del usuario
+
+  """
     Funcional.input("Cual es el peso del paquete (kg): " ,:float)
   end
 
+
   def solicitar_tipo_envio() do
+
+    docmodule"""
+
+  Funcion que solicita al usuario ingresar un tipo de envio
+
+  """
     Funcional.input("Cual es el tipo de envio? [Economico, Express, Internacional]: " ,:string)
   end
 
+
   def calcular_costo_total_envio(peso, tipo) do
+
+    docmodule"""
+
+  Funcion que calcula el costo total del envio
+
+  """
+  
     tipo_normalizado = String.downcase(tipo)
     case tipo_normalizado do
       "economico" ->
@@ -53,6 +86,12 @@ defmodule Empaquetadora do
         "ERROR: EL TIPO DE ENVIO NO ES VALIDO"
     end
   end
+
+  docmodule"""
+
+  Funcion que calcula el costo internacional para empacaje de tipo internacional
+
+  """
 
   defp calcular_costo_internacional(peso) do
     if peso <= 5 do

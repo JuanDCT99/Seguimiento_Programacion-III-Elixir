@@ -33,7 +33,7 @@ defmodule Funcional do
       )
     rescue
       ArgumentError ->
-        IO.puts("Error: El valor ingresado no es un número. Inténtalo de nuevo.")
+        IO.puts("Error: El valor ingresado no es un número en formato valido. Inténtalo de nuevo.")
         input(mensaje, :float)
     end
   end
